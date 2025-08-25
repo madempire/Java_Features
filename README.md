@@ -142,3 +142,34 @@ Ex:-//A new way to group
     // [4,5,6]
     // [7,8,9]
     // [10]
+
+# What are the primary goals behind recent Java releases? :-
+## 1. Make it concise:- reduce boilerplate and imporve readability.
+    1. Record:- No need for boilerplate code in data classes.
+        record Person(String name, int age){}
+    2. switch Expressions :- More readable and concise switch statements.
+        String result = switch(day){
+            case MONDAY, FRIDAY -> "Weekend is near!";
+            default -> "Regular day.";
+        };
+## 2. Cloud and container support:- Imporve compatability with cloud-native environments.
+    1. Optimized JDK Container Images :- Optimized JDK images for containers with small memory foot print and fast start up times.
+    2. GraalVm :- Enables efficient native image compilation for lightweight, fast-running applications.
+## 3. Imporve concurrency :- Introduces virtual threads for scalable parallelism.
+    1. Virtual Threads :- handles millions of lightweight threads efficiently.
+    Thread.startVirtualThread(()->Sout("from virtual thread")).join();
+## 4. Developer Productivity:- Provide better debugging tools and runtinme efficiency.
+    1. JShelL :- Interactive REPL for quick testing.
+    jshell> System.out.println("Hello, Java!");
+    2. Simpler Main Without class:- 
+    // HelloWorld.java
+    void main(){
+        sout("Hello buddy!");
+    }
+    3. Easy Launch Without Compilation:- Run source File directly.
+        $ java HelloWorld.java
+## 5. Reduce startup time:- Optimize performance for faster application launch.
+## 6. Better memory management:- Optimize Garbage Collection GC for lower latency.
+## 7. Backward Compatability :- Ensure smooth migration from older versions.
+
+ 
